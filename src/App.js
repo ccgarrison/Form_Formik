@@ -24,19 +24,19 @@ function App() {
 
   return (
     <div>
-      <p>
+     
         <form onSubmit={formik.handleSubmit}>
           <div>Email</div>
           <input name="emailField" type="text" placeholder="Email" onChange={formik.handleChange} value={formik.values.emailField}/>
-          {formik.errors.emailField ? <div> {formik.errors.emailField} </div>: null}
+          {formik.errors.emailField ? <div style{{color: 'orange'}}>{formik.errors.emailField}</div>: null}
           
           <div>Password</div>
           <input name="pswField" type="text" placeholder="Password" onChange={formik.handleChange} value={formik.values.pswField}/>
-          {formik.errors.pswField ? <div>{formik.errors.pswField}</div>: null}
+          {formik.errors.pswField ? <div style{{color: 'orange'}}>{formik.errors.pswField}</div>: null}
           <button id="submitBtn" type="submit"> Submit </button>
 
         </form>
-      </p>
+     
     </div>
   );
 }
